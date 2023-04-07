@@ -8,8 +8,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_form_bloc/flutter_form_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class Cric8TextField extends StatelessWidget {
-  Cric8TextField({Key? key,
+class MetaTextField extends StatelessWidget {
+  MetaTextField({Key? key,
     required this.controller,
     this.maxLength,
     this.labelText,
@@ -20,8 +20,8 @@ class Cric8TextField extends StatelessWidget {
     this.textStyling,
     this.labelStyling,
     this.backgroundColor,
-    this.borderColor,
-    this.errorColor,
+    this.borderColor=MetaColors.transparentColor,
+    this.errorColor=MetaColors.errorTextFieldBorderClr,
     this.inputType = TextInputType.text,
     this.enabled = true,
     this.inputFormatters,
@@ -74,10 +74,10 @@ class Cric8TextField extends StatelessWidget {
         disabledBorder: _renderBorder(),
         focusedBorder: _renderBorder(),
         enabledBorder: _renderBorder(),
-        label:Text(
-          labelText ?? "",
-          style: labelStyling,
-        ),
+        // label:Text(
+        //   labelText ?? "",
+        //   style: labelStyling,
+        // ),
         hintText: hintText,
         hintStyle: hintStyle ,
         filled: true,
@@ -98,8 +98,8 @@ class Cric8TextField extends StatelessWidget {
 
 }
 
-class Cric8BlocTextField extends StatelessWidget {
-  Cric8BlocTextField({Key? key,
+class MetaBlocTextField extends StatelessWidget {
+  MetaBlocTextField({Key? key,
     required this.textFieldBloc,
     this.maxLength,
     this.labelText="",

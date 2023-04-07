@@ -10,7 +10,7 @@ class MetaAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Color bgColor;
   final String? textTitle;
   final List<Widget>? widgets;
-  final double height = 60.h;
+  final double height = 120.h;
   final Function? onPressed;
   final bool enableLeading;
   final Widget? leading;
@@ -25,11 +25,11 @@ class MetaAppBar extends StatelessWidget implements PreferredSizeWidget {
       toolbarHeight: height,
       leadingWidth: !enableLeading ? 10.w: 45.w,
       automaticallyImplyLeading: enableLeading,
-      title:MetaTextView(text: textTitle!,textStyle: const MetaStyle(fontSize: 16.0,fontColor: Colors.black,fontFamily: FontConstants.FONT_BOLD)),
+      title:MetaTextView(text: textTitle!,textStyle: const MetaStyle(fontSize: 16.0,fontColor: MetaColors.whiteColor,fontFamily: FontConstants.FONT_BOLD)),
       leading: enableLeading ? getLeading():SizedBox(),
       bottom: bottomBar ?? PreferredSize(preferredSize: const Size(0,0), child: Container()),
       actions: actionWidgets,
-      // MetaImageView(path: "${Cric8FlavourConstants.cric8BaseImageAsset}app_back.png",)
+      // MetaImageView(path: "${MetaFlavourConstants.cric8BaseImageAsset}app_back.png",)
     );
   }
 

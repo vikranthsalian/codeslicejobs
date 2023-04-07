@@ -1,4 +1,5 @@
 import 'package:codeslicejobs/common/constants/route_constants.dart';
+import 'package:codeslicejobs/presentation/screen/nav_screen.dart';
 import 'package:codeslicejobs/presentation/screen/login_screen.dart';
 import 'package:codeslicejobs/presentation/screen/splash_screen.dart';
 import 'package:flutter/material.dart';
@@ -17,9 +18,13 @@ class AppRoutes {
     debugPrint("ROUTED:===============>"+routeSettings.name.toString());
     switch(routeSettings.name) {
       case RouteConstants.splashPath:
-        return LoginScreen();
+        return NavScreen();
+
       case RouteConstants.loginPath:
         return LoginScreen();
+
+        case RouteConstants.homePath:
+        return NavScreen();
 
       default:
         return SplashScreen();

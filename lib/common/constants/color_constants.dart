@@ -28,7 +28,7 @@ class MetaColors{
   static const black12Color = Color(0x1F000000);
   static const taleColor = Color(0xFF27C1BE);
 
-  static const primaryColor =  Color(0xFFCA1F3D);
+  static const primaryColor =  Color(0xff05457e);
   static const secondaryColor =  Color(0xFFAF0D25);
   static const primary_color = 0xFFCA1F3D;
   static const primary_dark = 0xFF00000;
