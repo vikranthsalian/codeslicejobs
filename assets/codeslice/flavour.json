@@ -1,0 +1,25 @@
+{
+  "appTitle": "CodeSlice Jobs",
+  "appSubTitle": "The Jobs You Dream",
+  "androidAppId": "com.codeslice.jobs",
+  "iosAppId": "com.codeslice.jobs",
+  "baseUrl": "",
+  "showNetworkLogs": true,
+  "flavourAssetPath":"assets/codeslice/images/",
+  "urls": {
+    "prodUrl" : "",
+    "devUrl" : "",
+    "qaUrl" : ""
+  },
+  "baseIMAGEPath":"assets/codeslice/images/",
+  "baseSVGPath":"assets/codeslice/svgs/",
+  "basePDFPath":"assets/codeslice/pdfs/",
+  "supportEmail" : "info@codeslice.tech",
+  "privacyPolicyUrl": "",
+  "termsUrl": "",
+  "appTheme" : {
+    "primaryColor" : "0xFF2854A1",
+    "secondaryColor" : "0XFFFFFFFF",
+    "cursorColor" : "0XFF000000"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "language": "English",
+  "body_text": "You have pushed the button this many times:",
+  "appname": "Cric8",
+  "welcome":"Welcome",
+  "lorem":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy",
+  "email_phone":"Email / Phone",
+  "password":"Password",
+  "login":"Sign In",
+  "forgot_pass":"Forgot Password?",
+  "set_password":"Set Password",
+  "set_password_title":"Please set your password to continue",
+  "new_password":"New Password",
+  "conform_password":"Conform Password",
+  "proceed":"Proceed",
+  "best_players":"Best Players",
+  "see_all":"see all",
+  "best_teams":"Best Teams",
+  "manage teams":"Manage Teams",
+  "login_instruction": "Please enter your user ID and password to continue"
+}
