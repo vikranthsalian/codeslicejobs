@@ -117,7 +117,7 @@ class MetaBlocTextField extends StatelessWidget {
     this.readOnly = false,
     this.isEnabled = true,
     this.textStyle = const MetaStyle(fontColor: MetaColors.textFieldTextColor,fontSize: 14,fontFamily: FontConstants.FONT_BOLD),
-    this.textColor= const Color(MetaColors.app_black)
+    this.textColor=  MetaColors.blackColor
   })
       : super(key: key);
   String labelText;

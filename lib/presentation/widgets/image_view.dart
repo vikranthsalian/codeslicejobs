@@ -5,7 +5,7 @@ class MetaImageView extends StatelessWidget {
   String path;
   double? wd;
   double? ht;
-  MetaImageView({super.key, required this.path,this.wd,this.ht});
+  MetaImageView({super.key, required this.path,this.wd=0,this.ht=0});
 
   @override
   Widget build(BuildContext context) {

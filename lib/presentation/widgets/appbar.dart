@@ -5,18 +5,19 @@ import 'package:codeslicejobs/presentation/widgets/style.dart';
 import 'package:codeslicejobs/presentation/widgets/text_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:line_icons/line_icons.dart';
 
 class MetaAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Color bgColor;
   final String? textTitle;
   final List<Widget>? widgets;
-  final double height = 120.h;
+  final double height = 40.h;
   final Function? onPressed;
   final bool enableLeading;
+  final bool centerTitle;
   final Widget? leading;
-  final  bottomBar;
   List<Widget>  actionWidgets;
-  MetaAppBar({ this.textTitle,this.leading,this.bgColor = MetaColors.whiteColor,this.actionWidgets=const [], this.widgets, this.onPressed,this.enableLeading=true,this.bottomBar});
+  MetaAppBar({ this.textTitle,this.centerTitle=true,this.leading,this.bgColor = MetaColors.primaryColor,this.actionWidgets=const [], this.widgets, this.onPressed,this.enableLeading=true});
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -27,8 +28,8 @@ class MetaAppBar extends StatelessWidget implements PreferredSizeWidget {
       automaticallyImplyLeading: enableLeading,
       title:MetaTextView(text: textTitle!,textStyle: const MetaStyle(fontSize: 16.0,fontColor: MetaColors.whiteColor,fontFamily: FontConstants.FONT_BOLD)),
       leading: enableLeading ? getLeading():SizedBox(),
-      bottom: bottomBar ?? PreferredSize(preferredSize: const Size(0,0), child: Container()),
       actions: actionWidgets,
+      centerTitle: centerTitle,
       // MetaImageView(path: "${MetaFlavourConstants.cric8BaseImageAsset}app_back.png",)
     );
   }
@@ -41,7 +42,7 @@ class MetaAppBar extends StatelessWidget implements PreferredSizeWidget {
     if(leading!=null){
       return leading;
     }
-    return MetaIcon(icon: Icons.arrow_back,color: MetaColors.blackColor,onIconPressed: (){
+    return MetaIcon(icon: LineIcons.arrowLeft,color: MetaColors.whiteColor,onIconPressed: (){
       onPressed!();
     });
 

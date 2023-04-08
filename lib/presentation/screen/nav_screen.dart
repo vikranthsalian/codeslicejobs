@@ -1,6 +1,9 @@
 import 'package:codeslicejobs/common/constants/color_constants.dart';
+import 'package:codeslicejobs/presentation/screen/bookmark_screen.dart';
+import 'package:codeslicejobs/presentation/screen/detail_screen.dart';
 import 'package:codeslicejobs/presentation/screen/home_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
 
@@ -23,17 +26,24 @@ class _NavScreenState extends State<NavScreen> {
       style: optionStyle,
     ),
     Text(
-      'Search',
+      'Profile',
       style: optionStyle,
     ),
     Text(
-      'Profile',
+      'Bookmark',
       style: optionStyle,
     ),
   ];
 
   @override
   Widget build(BuildContext context) {
+
+
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+        statusBarColor: MetaColors.primaryColor
+    ));
+
+
     return Scaffold(
       body: Center(
         child: HomeScreen(),
@@ -71,12 +81,12 @@ class _NavScreenState extends State<NavScreen> {
                   text: 'Likes',
                 ),
                 GButton(
-                  icon: LineIcons.search,
-                  text: 'Search',
-                ),
-                GButton(
                   icon: LineIcons.user,
                   text: 'Profile',
+                ),
+                GButton(
+                  icon: LineIcons.bookmark,
+                  text: 'Bookmark',
                 ),
               ],
               selectedIndex: _selectedIndex,

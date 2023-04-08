@@ -11,7 +11,9 @@ class MetaColors{
 
   static const transparentColor = Color(0x00000000);
   static const whiteColor = Color(0xFFFFFFFF);
+  static const greyColor = Color(0xFFE5E5E5);
   static const blackColor = Color(0xFF000000);
+  static const greyLightColor = Color(0xFFAAA6B9);
   static const textFieldTextColor = Color(0xFF262C3F);
   static const labelFieldTextColor = Color(0xFF6C6F86);
   static const textFieldBorderClr = Color(0xFFD5D9E3);
@@ -33,34 +35,6 @@ class MetaColors{
   static const primary_color = 0xFFCA1F3D;
   static const primary_dark = 0xFF00000;
   static const white = 0xFFFFFFFF;
-
-  static const red_button_color = 0xFFCA1F3D;
-  static const dark_grey = 0xFF262C3F;
-  static const light_grey = 0xFFD5D9E3;
-  static const app_black = 0xFF262C3F;
-  static const background_clr = 0xFFFAFAF8;
-  static const divider_clr = 0xFFEEF2F4;
-  static const dark_green_clr = 0xFF207166;
-  static const light_green_clr = 0xFF318C80;
-  static const hint_color = 0xFF6C6F86;
-  static const pink_color = 0xFFCA1F3D1A;
-  static const medium_grey = 0xFF7F828D;
-/*--------  Franchise app color--------------*/
-  // static const primary_color = 0xFFCA1F3D;
-  // static const primary_dark = 0xFF00000;
-  // static const white = 0xFFFFFFFF;
-
-  // static const red_button_color = 0xFFCA1F3D;
-  // static const dark_grey = 0xFF262C3F;
-  // static const light_grey = 0xFFD5D9E3;
-  // static const app_black = 0xFF262C3F;
-  // static const background_clr = 0xFFFAFAF8;
-  // static const divider_clr = 0xFFEEF2F4;
-  // static const dark_green_clr = 0xFF207166;
-  // static const light_green_clr = 0xFF318C80;
-  static const grey_border = 0xFF979797;
-  static const grey_text_color = 0xFF8D949D;
-  static const grey_bg = 0xFF0000001A;
 
 
 }

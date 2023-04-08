@@ -1,4 +1,5 @@
 import 'package:codeslicejobs/common/constants/route_constants.dart';
+import 'package:codeslicejobs/presentation/screen/detail_screen.dart';
 import 'package:codeslicejobs/presentation/screen/nav_screen.dart';
 import 'package:codeslicejobs/presentation/screen/login_screen.dart';
 import 'package:codeslicejobs/presentation/screen/splash_screen.dart';
@@ -25,6 +26,9 @@ class AppRoutes {
 
         case RouteConstants.homePath:
         return NavScreen();
+
+        case RouteConstants.detailPath:
+        return DetailScreen();
 
       default:
         return SplashScreen();
