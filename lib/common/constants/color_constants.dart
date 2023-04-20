@@ -17,7 +17,8 @@ class MetaColors{
   static const textFieldTextColor = Color(0xFF262C3F);
   static const labelFieldTextColor = Color(0xFF6C6F86);
   static const textFieldBorderClr = Color(0xFFD5D9E3);
-  static const errorTextFieldBorderClr = Color(0xFFFF0000);
+  static const redColor = Color(0xFFFF0000);
+  static const a6b9Color = Color(0xFFAAA6B9);
   static const c2Color = Color(0xFFC2C2C2);
   static const fAColor = Color(0xFFFAFAF8);
   static const gl318Color = Color(0xFF318C80);
@@ -31,6 +32,8 @@ class MetaColors{
   static const taleColor = Color(0xFF27C1BE);
 
   static const primaryColor =  Color(0xff05457e);
+  static const d6CColor =  Color(0xffD6CDFE);
+
   static const secondaryColor =  Color(0xFFAF0D25);
   static const primary_color = 0xFFCA1F3D;
   static const primary_dark = 0xFF00000;

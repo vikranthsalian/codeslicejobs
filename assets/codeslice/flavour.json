@@ -11,9 +11,9 @@
     "devUrl" : "",
     "qaUrl" : ""
   },
-  "baseIMAGEPath":"assets/codeslice/images/",
-  "baseSVGPath":"assets/codeslice/svgs/",
-  "basePDFPath":"assets/codeslice/pdfs/",
+  "baseImagePath":"assets/images/",
+  "baseSvgPath":"assets/svgs/",
+  "basePdfPath":"assets/pdfs/",
   "supportEmail" : "info@codeslice.tech",
   "privacyPolicyUrl": "",
   "termsUrl": "",

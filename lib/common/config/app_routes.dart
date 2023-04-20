@@ -3,6 +3,7 @@ import 'package:codeslicejobs/presentation/screen/detail_screen.dart';
 import 'package:codeslicejobs/presentation/screen/nav_screen.dart';
 import 'package:codeslicejobs/presentation/screen/login_screen.dart';
 import 'package:codeslicejobs/presentation/screen/splash_screen.dart';
+import 'package:codeslicejobs/presentation/screen/upload_screen.dart';
 import 'package:flutter/material.dart';
 
 class AppRoutes {
@@ -29,6 +30,9 @@ class AppRoutes {
 
         case RouteConstants.detailPath:
         return DetailScreen();
+
+        case RouteConstants.uploadPath:
+        return UploadScreen();
 
       default:
         return SplashScreen();

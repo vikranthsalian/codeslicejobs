@@ -6,6 +6,7 @@ class FlavourConstants {
   static  String appTitle =  FlavorConfig.instance.variables["appTitle"];
   static  String appSubTitle =  FlavorConfig.instance.variables["appSubTitle"];
   static  String flavourAssetPath =  FlavorConfig.instance.variables["flavourAssetPath"];
+  static  String baseImagePath =  FlavorConfig.instance.variables["baseImagePath"];
   static  bool showNetworkLogs =  FlavorConfig.instance.variables["showNetworkLogs"];
 
 

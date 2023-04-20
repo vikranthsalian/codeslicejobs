@@ -2,6 +2,7 @@ import 'package:codeslicejobs/common/constants/color_constants.dart';
 import 'package:codeslicejobs/presentation/screen/bookmark_screen.dart';
 import 'package:codeslicejobs/presentation/screen/detail_screen.dart';
 import 'package:codeslicejobs/presentation/screen/home_screen.dart';
+import 'package:codeslicejobs/presentation/screen/upload_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -34,6 +35,12 @@ class _NavScreenState extends State<NavScreen> {
       style: optionStyle,
     ),
   ];
+  List screens =[
+    HomeScreen(),
+    BookMarkScreen(),
+    UploadScreen(),
+    BookMarkScreen(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +53,7 @@ class _NavScreenState extends State<NavScreen> {
 
     return Scaffold(
       body: Center(
-        child: HomeScreen(),
+        child: screens[_selectedIndex],
       ),
       bottomNavigationBar: Container(
         // decoration: BoxDecoration(

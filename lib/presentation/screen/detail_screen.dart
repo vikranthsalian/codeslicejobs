@@ -1,7 +1,9 @@
+import 'package:codeslicejobs/common/config/navigator_key.dart';
 import 'package:codeslicejobs/common/constants/asset_constants.dart';
 import 'package:codeslicejobs/common/constants/color_constants.dart';
 import 'package:codeslicejobs/common/constants/flavour_constants.dart';
 import 'package:codeslicejobs/common/constants/font_constants.dart';
+import 'package:codeslicejobs/common/constants/route_constants.dart';
 import 'package:codeslicejobs/common/extensions/expanded_ext.dart';
 import 'package:codeslicejobs/presentation/widgets/appbar.dart';
 import 'package:codeslicejobs/presentation/widgets/column_view.dart';
@@ -44,16 +46,21 @@ class DetailScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 20.w,vertical: 10.h),
-              decoration: BoxDecoration(
-                color: MetaColors.primaryColor,
-                borderRadius: BorderRadius.circular(10.r)
-              ),
-              child: MetaTextView(
-                  text: "Apply Now",
-                  textStyle: const MetaStyle(fontSize: 20.0,fontColor: MetaColors.whiteColor,
-                      fontFamily: FontConstants.FONT_BOLD)
+            InkWell(
+              onTap: (){
+                Navigator.pushNamed(appNavigatorKey.currentState!.context, RouteConstants.uploadPath);
+              },
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 20.w,vertical: 10.h),
+                decoration: BoxDecoration(
+                  color: MetaColors.primaryColor,
+                  borderRadius: BorderRadius.circular(10.r)
+                ),
+                child: MetaTextView(
+                    text: "Apply Now",
+                    textStyle: const MetaStyle(fontSize: 20.0,fontColor: MetaColors.whiteColor,
+                        fontFamily: FontConstants.FONT_BOLD)
+                ),
               ),
             ),
           ].expandedEqually().toList(),
@@ -62,66 +69,67 @@ class DetailScreen extends StatelessWidget {
       body: Container(
         child: Column(
           children: [
-            header(),
-          Container(
-            child: Transform.translate(
-                offset: Offset(0,-40.h),
-                child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 20.w),
+            Stack(
+              children: [
+                header(),
+                Container(
+                  margin: EdgeInsets.only(top: 80.h),
+                  height: 80.h,
+                  child: Container(
+                      alignment: Alignment.center,
+                      child: MetaImageView(path: FlavourConstants.flavourAssetPath+AssetConstants.logoRound,wd: 80,ht: 80)
+                  ),
+                ),
+              ],
+            ),
+
+
+          MetaColumnView(children: [
+
+            SizedBox(height: 5.h),
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 20.w),
+              child: MetaTextView(
+                  text: "UI/UX Designer",
+                  textAlign: TextAlign.start,
+                  textStyle: const MetaStyle(fontSize: 20.0,fontColor: MetaColors.primaryColor,
+                      fontFamily: FontConstants.FONT_BOLD)
+              ),
+            ),
+            SizedBox(height: 5.h),
+            MetaRowView(
+                children: [
+                  Container(
                     alignment: Alignment.center,
-                    child: MetaImageView(path: FlavourConstants.flavourAssetPath+AssetConstants.logoRound,wd: 80,ht: 80)
-                ),
-              ),
-          ),
-          Transform.translate(
-            offset: Offset(0,-50.h),
-            child: MetaColumnView(children: [
-
-              SizedBox(height: 5.h),
-              Container(
-                padding: EdgeInsets.symmetric(horizontal: 20.w),
-                child: MetaTextView(
-                    text: "UI/UX Designer",
-                    textAlign: TextAlign.start,
-                    textStyle: const MetaStyle(fontSize: 20.0,fontColor: MetaColors.primaryColor,
-                        fontFamily: FontConstants.FONT_BOLD)
-                ),
-              ),
-              MetaRowView(
-                  children: [
-                    Container(
-                      alignment: Alignment.center,
-                      child: MetaTextView(
-                          text: "Google",
-                          textAlign: TextAlign.start,
-                          textStyle: const MetaStyle(fontSize: 16.0,fontColor: MetaColors.primaryColor,
-                              fontFamily: FontConstants.FONT_SEMI_BOLD)
-                      ),
+                    child: MetaTextView(
+                        text: "Google",
+                        textAlign: TextAlign.start,
+                        textStyle: const MetaStyle(fontSize: 12.0,fontColor: MetaColors.primaryColor,
+                            fontFamily: FontConstants.FONT_SEMI_BOLD)
                     ),
+                  ),
 
-                    Container(
-                      alignment: Alignment.center,
-                      child: MetaTextView(
-                          text: "California",
-                          textAlign: TextAlign.start,
-                          textStyle: const MetaStyle(fontSize: 16.0,fontColor: MetaColors.primaryColor,
-                              fontFamily: FontConstants.FONT_SEMI_BOLD)
-                      ),
+                  Container(
+                    alignment: Alignment.center,
+                    child: MetaTextView(
+                        text: "California",
+                        textAlign: TextAlign.start,
+                        textStyle: const MetaStyle(fontSize: 12.0,fontColor: MetaColors.primaryColor,
+                            fontFamily: FontConstants.FONT_SEMI_BOLD)
                     ),
-                    Container(
-                      alignment: Alignment.center,
-                      child: MetaTextView(
-                          text: "1 day ago",
-                          textAlign: TextAlign.start,
-                          textStyle: const MetaStyle(fontSize: 16.0,fontColor: MetaColors.primaryColor,
-                              fontFamily: FontConstants.FONT_SEMI_BOLD)
-                      ),
-                    )
-                  ].expandedEqually().toList()),
-              SizedBox(height: 5.h),
-
-            ])
-          ),
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    child: MetaTextView(
+                        text: "1 day ago",
+                        textAlign: TextAlign.start,
+                        textStyle: const MetaStyle(fontSize: 12.0,fontColor: MetaColors.primaryColor,
+                            fontFamily: FontConstants.FONT_SEMI_BOLD)
+                    ),
+                  )
+                ].expandedEqually().toList()),
+            SizedBox(height: 15.h),
+          ]),
           Expanded(child: bodyView())
           ],
         ),
@@ -130,7 +138,7 @@ class DetailScreen extends StatelessWidget {
   }
   Widget header(){
     return Container(
-      height: 120,
+      height: 120.h,
       color:MetaColors.primaryColor,
       child: MetaColumnView(
         crossAxisAlignment: CrossAxisAlignment.start,

@@ -3,4 +3,5 @@ class RouteConstants {
   static const loginPath = "/login";
   static const homePath = "/home";
   static const detailPath = "/detail";
+  static const uploadPath = "/upload";
 }
