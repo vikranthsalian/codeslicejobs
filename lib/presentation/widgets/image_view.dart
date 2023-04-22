@@ -19,7 +19,7 @@ class MetaImageView extends StatelessWidget {
 
     return  Image.asset(
         path,
-        width: wd!.w,
+        width: wd!.h,
         height: ht!.h,
         fit: BoxFit.contain
     );

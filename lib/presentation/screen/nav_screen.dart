@@ -1,7 +1,9 @@
 import 'package:codeslicejobs/common/constants/color_constants.dart';
+import 'package:codeslicejobs/presentation/screen/application_screen.dart';
 import 'package:codeslicejobs/presentation/screen/bookmark_screen.dart';
 import 'package:codeslicejobs/presentation/screen/detail_screen.dart';
 import 'package:codeslicejobs/presentation/screen/home_screen.dart';
+import 'package:codeslicejobs/presentation/screen/message_screen.dart';
 import 'package:codeslicejobs/presentation/screen/upload_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -38,7 +40,8 @@ class _NavScreenState extends State<NavScreen> {
   List screens =[
     HomeScreen(),
     BookMarkScreen(),
-    UploadScreen(),
+    ApplicationScreen(),
+    MessageScreen(),
     BookMarkScreen(),
   ];
 
@@ -81,19 +84,25 @@ class _NavScreenState extends State<NavScreen> {
               tabs: [
                 GButton(
                   icon: LineIcons.home,
-                  text: 'Home',
-                ),
-                GButton(
-                  icon: LineIcons.heart,
-                  text: 'Likes',
-                ),
-                GButton(
-                  icon: LineIcons.user,
-                  text: 'Profile',
+
                 ),
                 GButton(
                   icon: LineIcons.bookmark,
-                  text: 'Bookmark',
+
+                ),
+
+                GButton(
+                  icon: LineIcons.airbnb,
+
+                ),
+                GButton(
+                  icon: LineIcons.facebookMessenger,
+
+                ),
+
+                GButton(
+                  icon: LineIcons.user,
+
                 ),
               ],
               selectedIndex: _selectedIndex,
