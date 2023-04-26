@@ -1,7 +1,9 @@
+import 'package:codeslicejobs/common/config/navigator_key.dart';
 import 'package:codeslicejobs/common/constants/asset_constants.dart';
 import 'package:codeslicejobs/common/constants/color_constants.dart';
 import 'package:codeslicejobs/common/constants/flavour_constants.dart';
 import 'package:codeslicejobs/common/constants/font_constants.dart';
+import 'package:codeslicejobs/common/constants/route_constants.dart';
 import 'package:codeslicejobs/common/extensions/expanded_ext.dart';
 import 'package:codeslicejobs/presentation/widgets/appbar.dart';
 import 'package:codeslicejobs/presentation/widgets/column_view.dart';
@@ -63,62 +65,67 @@ class MessageScreen extends StatelessWidget {
   }
 
   Widget jobCard({img,title,subtitle,time,int count=0}){
-    return Container(
-      alignment: Alignment.topCenter,
-      height: 55.h,
-      child: ListTile(
-        dense: true,
-          leading: Container(
-              child: MetaImageView(
-                  ht: 30,wd: 30,
-                  path:img
-              )
-          ),
-          title:  Container(
-            child: MetaTextView(
-                text: title,
-                textAlign: TextAlign.start,
-                textStyle: const MetaStyle(fontSize: 14.0,fontColor: MetaColors.blackColor,
-                    fontFamily: FontConstants.FONT_BOLD)
+    return InkWell(
+      onTap: (){
+        Navigator.pushNamed(appNavigatorKey.currentState!.context, RouteConstants.chatPath);
+      },
+      child: Container(
+        alignment: Alignment.topCenter,
+        height: 55.h,
+        child: ListTile(
+          dense: true,
+            leading: Container(
+                child: MetaImageView(
+                    ht: 30,wd: 30,
+                    path:img
+                )
             ),
-          ),
-          subtitle:MetaTextView(
-              text: subtitle,
-              textAlign: TextAlign.start,
-              textStyle: const MetaStyle(fontSize: 12.0,fontColor: MetaColors.blackColor,
-                  fontFamily: FontConstants.FONT_REGULAR)
-          ),
-        trailing:  MetaColumnView(
-          children: [
-           count!= 0 ? Container(
-              alignment: Alignment.center,
-              width: 15.w,
-              height: 15.w,
-              child:  MetaTextView(
-                  text: count.toString(),
+            title:  Container(
+              child: MetaTextView(
+                  text: title,
                   textAlign: TextAlign.start,
-                  textStyle: const MetaStyle(fontSize: 8.0,fontColor: MetaColors.whiteColor,
+                  textStyle: const MetaStyle(fontSize: 14.0,fontColor: MetaColors.blackColor,
                       fontFamily: FontConstants.FONT_BOLD)
               ),
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: MetaColors.primaryColor
-              ),
-            ):Container(
-             width: 15.w,
-             height: 15.w,
-           ),
-            SizedBox(height: 5.h,),
-            MetaTextView(
-                text: time,
+            ),
+            subtitle:MetaTextView(
+                text: subtitle,
                 textAlign: TextAlign.start,
-                textStyle: const MetaStyle(fontSize: 10.0,fontColor: MetaColors.greyLightColor,
+                textStyle: const MetaStyle(fontSize: 12.0,fontColor: MetaColors.blackColor,
                     fontFamily: FontConstants.FONT_REGULAR)
             ),
-          ],
-        ),
+          trailing:  MetaColumnView(
+            children: [
+             count!= 0 ? Container(
+                alignment: Alignment.center,
+                width: 15.w,
+                height: 15.w,
+                child:  MetaTextView(
+                    text: count.toString(),
+                    textAlign: TextAlign.start,
+                    textStyle: const MetaStyle(fontSize: 8.0,fontColor: MetaColors.whiteColor,
+                        fontFamily: FontConstants.FONT_BOLD)
+                ),
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: MetaColors.primaryColor
+                ),
+              ):Container(
+               width: 15.w,
+               height: 15.w,
+             ),
+              SizedBox(height: 5.h,),
+              MetaTextView(
+                  text: time,
+                  textAlign: TextAlign.start,
+                  textStyle: const MetaStyle(fontSize: 10.0,fontColor: MetaColors.greyLightColor,
+                      fontFamily: FontConstants.FONT_REGULAR)
+              ),
+            ],
+          ),
 
-      )
+        )
+      ),
     );
   }
 

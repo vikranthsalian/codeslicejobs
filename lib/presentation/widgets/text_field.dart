@@ -17,6 +17,7 @@ class MetaTextField extends StatelessWidget {
     this.onChanged,
     this.onValidate,
     this.suffixIcon,
+    this.prefixIcon,
     this.textStyling,
     this.labelStyling,
     this.backgroundColor,
@@ -39,6 +40,7 @@ class MetaTextField extends StatelessWidget {
   Function(String)? onChanged;
   FormFieldValidator<String>? onValidate;
   Widget? suffixIcon;
+  Widget? prefixIcon;
   TextStyle? textStyling;
   TextStyle? labelStyling;
   Color? backgroundColor;
@@ -70,7 +72,7 @@ class MetaTextField extends StatelessWidget {
       validator: onValidate,
       decoration: InputDecoration(
         isDense: true,
-        contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        contentPadding:  EdgeInsets.symmetric(horizontal: 10.w, vertical: 15.h),
         border: _renderBorder(),
         disabledBorder: _renderBorder(),
         focusedBorder: _renderBorder(),
@@ -86,6 +88,7 @@ class MetaTextField extends StatelessWidget {
         errorStyle: Theme.of(context).textTheme.bodySmall?.copyWith(color: errorColor!),
         helperMaxLines: 1,
         suffixIcon: suffixIcon,
+        prefixIcon: prefixIcon,
       ),
       readOnly: readOnly,
     );

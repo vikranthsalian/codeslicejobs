@@ -1,4 +1,5 @@
 import 'package:codeslicejobs/common/constants/route_constants.dart';
+import 'package:codeslicejobs/presentation/screen/chat_screen.dart';
 import 'package:codeslicejobs/presentation/screen/detail_screen.dart';
 import 'package:codeslicejobs/presentation/screen/nav_screen.dart';
 import 'package:codeslicejobs/presentation/screen/login_screen.dart';
@@ -33,6 +34,9 @@ class AppRoutes {
 
         case RouteConstants.uploadPath:
         return UploadScreen();
+
+        case RouteConstants.chatPath:
+        return ChatScreen();
 
       default:
         return SplashScreen();
